@@ -1,10 +1,21 @@
 public class Main {
     public static void main(String[] args) {
-        int year = 1584;
-        printLeapYear(year);
-        int clietnOs = 0;
-        int clientDeviceYear = 2000;
-        findOutYear(clietnOs, clientDeviceYear);
+        {
+            int year = 1584;
+            printLeapYear(year);
+
+            int clietnOs = 0;
+            int clientDeviceYear = 2000;
+            findOutYear(clietnOs, clientDeviceYear);
+
+            int deliveryDistance = 70;
+            int days = distanceTime(deliveryDistance);
+            if (days > 0) {
+                System.out.println("Потребуется дней: " + days + " срок доставки.");
+            } else {
+                System.out.println("Доставки нет.");
+            }
+        }
     }
 
     /// Задание 1
@@ -27,11 +38,24 @@ public class Main {
         } else {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
- ///Задание 3
+    }
 
 
+    /// Задание 3
+    public static int distanceTime(int km) {
+        if (km <= 20) {
+            return 1;
+        } else if (km > 20 && km < 60) {
+            return 2;
+        } else if (km >= 60 && km < 100) {
+            return 3;
+        } else {
+            return 0;
+        }
     }
 }
+
+
 
 
 
