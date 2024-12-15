@@ -20,7 +20,7 @@ public class Main {
 
     /// Задание 1
     public static void printLeapYear(int year) {
-        if (year >= 1584 && (year % 4 == 0 || year % 100 != 0 && year % 400 == 0)) {
+        if (year >= 1584 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
             System.out.println(year + " является високосным годом");
         } else {
             System.out.println(year + " не является високосным годом");
